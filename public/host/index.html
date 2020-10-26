@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Host | Gabekit Live</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css" integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA==" crossorigin="anonymous" />
+        <embed src="../player/music.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />
+    </head>
+    <body class="bg-gradient-to-r bg-gradient-to-r from-teal-400 to-blue-500">
+        
+        <div class="flex items-center justify-center h-screen " >
+            <div class="bg-gradient-to-r bg-gradient-to-r from-orange-500 to-yellow-500 max-w-screen-lg  shadow-2xl rounded-lg mx-auto text-center py-12 mt-4">
+                <center>
+                    <h1 id = "title" class="text-3xl font-semibold text-white">Game Pin: </h1>
+                    <h2 id = "gamePinText" class="text-2xl font-semibold text-white">12345</h2>
+                </center>
+                    <textarea class="shadow-outer font-bold py-5 text-center" style = "border: 5px, 5px, 5px, black; width: 500px !important; height: 500px; float:left; margin: 20px; border-radius: 5px; resize: none; line-height: 2em;" readonly id = 'players'></textarea>
+
+                <center>
+                    <br>
+        
+                    <button id = 'start' onclick = "startGame()" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                        Start Game
+                    </button>
+
+                    <button id = "cancel" onclick = "endGame()" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Cancel Game</button>
+                </center>
+
+
+            </div>
+        </div>
+        <script src = "../socket.io/socket.io.js"></script>
+        <script src = "../js/libs/jqueryLibrary.js"></script>
+        <script src = "../js/libs/deparam.js"></script>
+        <script src = "../js/host.js"></script> 
+    </body>
+</html>
+

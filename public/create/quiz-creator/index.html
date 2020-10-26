@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creator | Gabekit Live</title>
+        <link rel = "stylesheet" href = "../../css/quizCreator.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css" integrity="sha512-l7qZAq1JcXdHei6h2z8h8sMe3NbMrmowhOl+QkP3UhifPpCW2MC4M0i26Y8wYpbz1xD9t61MLT9L1N773dzlOA==" crossorigin="anonymous" />
+
+    </head>
+    <body class="bg-gradient-to-r from-teal-400 to-blue-500">
+
+
+
+        <br>
+        <br>
+        <div class="max-w-screen-lg bg-white shadow-2xl rounded-lg mx-auto text-center py-12 mt-4 ">
+
+            <h1 id = "title" class="text-3xl font-semibold text-black py-3">Gabekit Quiz Creator Studio</h1>
+
+            <div id = "allQuestions" class="font-medium">
+                <div id="question-field" class="question-field bg-gradient-to-r bg-gradient-to-r from-orange-500 to-yellow-500 shadow-2xl rounded-lg mx-auto text-center py-12 mt-4">
+                    <label for="name">Quiz name</label>
+                    <input id = "name" type = "text" name="name" autofocus/>
+                    <br>
+                    <br>
+                    <label>Question 1: </label>
+                    <input class = "question" id = "q1" type = "text" autofocus/>
+                    <br>
+                    <br>
+                    <label>Answer 1: </label>
+                    <input id = "1a1" type = "text" autofocus/>
+                    <label>Answer 2: </label>
+                    <input id = "1a2" type = "text" autofocus/>
+                    <br>
+                    <br>
+                    <label>Answer 3: </label>
+                    <input id = "1a3"  type = "text"autofocus/>
+                    <label>Answer 4: </label>
+                    <input id = "1a4"  type = "text" autofocus/>
+                    <br>
+                    <br>
+                    <label>Correct Answer (1-4) :</label>
+                    <input class = "correct" id = "correct1"  type = "number" autofocus/>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button onclick = "addQuestion()" class="px-7 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded">Add another question</button>
+            <button onclick = "deleteQuestion()" class="ml-2 px-7 bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded">Remove question</button>
+
+            <br>
+
+            <button onclick = 'updateDatabase()' class="mt-2 mr-2 bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded">
+                Create Quiz
+            </button>
+
+            <button onclick = 'cancelQuiz()' class="px-7 bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
+                Exit Studio
+            </button>
+        </div>
+        <br>
+
+
+        <br>
+        <br>
+
+
+
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/quizCreator.js"></script>
+    </body>
+</html>

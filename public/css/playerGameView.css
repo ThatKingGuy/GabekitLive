@@ -1,0 +1,62 @@
+body{
+    background-color: #e0e0e0;
+}
+.question{
+    font-family: 'Kumbh Sans';
+    color: white;
+    font-size: 60px;
+    padding-top: 9%;
+    text-align: center;
+    margin: auto;
+}
+
+.answer-grid {
+    color: white;
+    display: grid;
+    grid-template-columns: 2 2 2;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    float: left;
+
+}
+
+.grid-item {
+    cursor: pointer;
+    color: white;
+    font-style: normal;
+    padding: 24.3% !important;
+    margin: 5px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.button-text{
+    color: white;
+    font-style: normal;
+    font-size:  45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.item-red {
+    grid-column: 1;
+    grid-row: 1;
+}
+.item-blue {
+    grid-column: 0;
+    grid-row: 0;
+}
+.item-green {
+    grid-column: 1;
+    grid-row: 0;
+}
+.item-yellow {
+    grid-column: 0;
+    grid-row: 1;
+}
